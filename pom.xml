@@ -151,25 +151,6 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
-        <!--        &lt;!&ndash;    jstl&ndash;&gt;-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/jstl/jstl &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>jstl</groupId>-->
-        <!--            <artifactId>jstl</artifactId>-->
-        <!--            <version>1.2</version>-->
-        <!--        </dependency>-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/taglibs/standard &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>taglibs</groupId>-->
-        <!--            <artifactId>standard</artifactId>-->
-        <!--            <version>1.1.2</version>-->
-        <!--        </dependency>-->
-        <!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.freemarker/freemarker &ndash;&gt;-->
-        <!--        <dependency>-->
-        <!--            <groupId>org.freemarker</groupId>-->
-        <!--            <artifactId>freemarker</artifactId>-->
-        <!--            <version>2.3.31</version>-->
-        <!--        </dependency>-->
         <!--       thymeleaf 模板引擎-->
         <dependency>
             <groupId>org.thymeleaf</groupId>
