@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lin.gamestore.dao.AdminUserDao">
+    <select id="queryAdminUserList" resultType="com.lin.gamestore.entity.AdminUser">
+        SELECT *
+        FROM gs_admin_user
+        ORDER BY admin_user_id DESC
+    </select>
+    <insert id="insertAdminUser" useGeneratedKeys="true" parameterType="com.lin.gamestore.entity.AdminUser"
+            keyProperty="adminUserId" keyColumn="admin_user_id">
+        INSERT INTO gs_admin_user(username, password, create_time, update_time)
+        values (#{username}, #{password}, #{createTime}, #{updateTime})
+    </insert>
+    <select id="queryAdminByUserNameAndPwd" resultType="com.lin.gamestore.entity.AdminUser" parameterType="String">
+        SELECT *
+        FROM gs_admin_user
+        WHERE username = #{username}
+          AND password = #{password}
+    </select>
+    <select id="queryAdminByAdminUserId" resultType="com.lin.gamestore.entity.AdminUser" parameterType="Long">
+        SELECT *
+        FROM gs_admin_user
+        WHERE admin_user_id = #{adminUserId}
+    </select>
+    <update id="updateAdminUser">
+        UPDATE gs_admin_user
+        <set>
+            <if test="newPassword!=null">password=#{newPassword},</if>
+            <if test="updateTime!=null">update_time=#{updateTime}</if>
+        </set>
+        WHERE
+        admin_user_id=#{adminUserId} AND username=#{username} AND password=#{password}
+    </update>
+</mapper>

@@ -2,25 +2,17 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lin.gamestroe.dao.ProductCategoryDao">
-    <select id="queryProductCategoryList" resultType="com.lin.gamestroe.entity.ProductCategory">
+<mapper namespace="com.lin.gamestore.dao.ProductCategoryDao">
+    <select id="queryProductCategoryList" resultType="com.lin.gamestore.entity.ProductCategory">
         select *
         from gs_product_category;
     </select>
-    <insert id="insertProductCategory" parameterType="com.lin.gamestroe.entity.ProductCategory">
-        insert into gs_product_category(category_id, name, parent_category_id, create_time, update_time)
-        values (#{categoryId}, #{name}, #{parentCategoryId}, #{createTime}, #{updateTime})
+    <insert id="insertProductCategory" parameterType="com.lin.gamestore.entity.ProductCategory">
+        insert into gs_product_category(product_category_name, priority, create_time)
+        values (#{productCategoryName}, #{priority}, #{createTime})
     </insert>
-    <update id="updateProductCategory">
-        update gs_product_category
-        <set>
-            <if test="name!=null">name=#{name},</if>
-            <if test="updateTime!=null">update_time=#{updateTime}</if>
-        </set>
-        where category_id=#{categoryId}
-    </update>
     <delete id="deleteProductCategory">
         delete from gs_product_category
-        where category_id = #{categoryId}
+        where product_category_id = #{productCategoryId}
     </delete>
 </mapper>

@@ -74,7 +74,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-    <logger name="com.lin.gamestroe" level="${log.level}" additivity="true">
+    <logger name="com.lin.gamestore" level="${log.level}" additivity="true">
         <appender-ref ref="debugAppender"/>
         <appender-ref ref="infoAppender"/>
         <appender-ref ref="errorAppender"/>
