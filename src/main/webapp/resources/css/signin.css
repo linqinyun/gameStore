@@ -40,3 +40,13 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+#jVerify{
+    float: left;
+    width: 60%;
+}
+#captimg{
+    height: 45px;
+    float: left;
+    width: 40%;
+}

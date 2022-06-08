@@ -58,19 +58,19 @@ public class AdminUserExecution {
         this.count = count;
     }
 
-    public AdminUser getAuthUser() {
+    public AdminUser getAdminUser() {
         return adminUser;
     }
 
-    public void setAuthUser(AdminUser adminUser) {
+    public void setAdminUser(AdminUser adminUser) {
         this.adminUser = adminUser;
     }
 
-    public List<AdminUser> getAuthUserList() {
+    public List<AdminUser> getAdminUserList() {
         return adminUserList;
     }
 
-    public void setAuthUserList(List<AdminUser> adminUserList) {
+    public void setAdminUserList(List<AdminUser> adminUserList) {
         this.adminUserList = adminUserList;
     }
 }

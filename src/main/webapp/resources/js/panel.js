@@ -12,7 +12,7 @@ $(function () {
         })
     })
 
-    $(".panel-body > .nav > li > a").on("click", function (e) {
-        alert(e.currentTarget.textContent);
-    });
+    // $(".panel-body > .nav > li > a").on("click", function (e) {
+    //     alert(e.currentTarget.textContent);
+    // });
 });

@@ -29,8 +29,8 @@ public class AdminUserServiceImpl implements AdminUserService {
     }
 
     @Override
-    public AdminUser getAdminUserByUserNameAndPwd(String userName, String password) {
-        return adminUserDao.queryAdminByUserNameAndPwd(userName, password);
+    public AdminUser getAdminUserByUserNameAndPwd(String username, String password) {
+        return adminUserDao.queryAdminByUserNameAndPwd(username, password);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class AdminUserServiceImpl implements AdminUserService {
             try {
                 int effectedNum = adminUserDao.updateAdminUser(adminUserId, username, password, newPassword, new Date());
                 if (effectedNum <= 0) {
-                    throw new AdminUserOperationException("更新密码失败");
+                    return new AdminUserExecution(AdminUserStateEnum.FAILED);
                 }
                 return new AdminUserExecution(AdminUserStateEnum.SUCCESS);
             } catch (Exception e) {

@@ -11,7 +11,7 @@ public interface AdminUserService {
 
     AdminUser getAdminUserByAdminUserId(Long adminUserId);
 
-    AdminUser getAdminUserByUserNameAndPwd(String userName, String password);
+    AdminUser getAdminUserByUserNameAndPwd(String username, String password);
 
     AdminUserExecution bindAdminUser(AdminUser adminUser) throws AdminUserOperationException;
 
