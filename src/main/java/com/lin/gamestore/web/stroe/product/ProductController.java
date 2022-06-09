@@ -60,18 +60,18 @@ public class ProductController {
             modelMap.put("errMsg", e.toString());
         }
         if (product != null) {
-            try {
-                ProductExecution pe = productService.bindProduct(product);
-                if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
-                    modelMap.put("success", true);
-                } else {
-                    modelMap.put("success", false);
-                    modelMap.put("errMsg", pe.getStateInfo());
-                }
-            } catch (ProductOperationException e) {
-                modelMap.put("success", false);
-                modelMap.put("errMsg", e.toString());
-            }
+//            try {
+//                ProductExecution pe = productService.bindProduct(product);
+//                if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
+//                    modelMap.put("success", true);
+//                } else {
+//                    modelMap.put("success", false);
+//                    modelMap.put("errMsg", pe.getStateInfo());
+//                }
+//            } catch (ProductOperationException e) {
+//                modelMap.put("success", false);
+//                modelMap.put("errMsg", e.toString());
+//            }
         } else {
             modelMap.put("success", false);
             modelMap.put("errMsg", "信息缺失");
@@ -93,18 +93,18 @@ public class ProductController {
             modelMap.put("errMsg", e.toString());
         }
         if (product != null && product.getProductId() != null) {
-            try {
-                ProductExecution pe = productService.modifProduct(product);
-                if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
-                    modelMap.put("success", true);
-                } else {
-                    modelMap.put("success", false);
-                    modelMap.put("errMsg", pe.getStateInfo());
-                }
-            } catch (ProductOperationException e) {
-                modelMap.put("success", false);
-                modelMap.put("errMsg", e.toString());
-            }
+//            try {
+//                ProductExecution pe = productService.modifProduct(product);
+//                if (pe.getState() == ProductStateEnum.SUCCESS.getState()) {
+//                    modelMap.put("success", true);
+//                } else {
+//                    modelMap.put("success", false);
+//                    modelMap.put("errMsg", pe.getStateInfo());
+//                }
+//            } catch (ProductOperationException e) {
+//                modelMap.put("success", false);
+//                modelMap.put("errMsg", e.toString());
+//            }
         } else {
             modelMap.put("success", false);
             modelMap.put("errMsg", "信息缺失");

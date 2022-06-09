@@ -22,16 +22,16 @@ public class ProductExecution {
     }
 
     //成功的构造器 -1
-    public ProductExecution(int state, String stateInfo, Product product) {
-        this.state = state;
-        this.stateInfo = stateInfo;
+    public ProductExecution(ProductStateEnum stateEnum, Product product) {
+        this.state = stateEnum.getState();
+        this.stateInfo = stateEnum.getStateInfo();
         this.product = product;
     }
 
     //成功的构造器 -2
-    public ProductExecution(int state, String stateInfo, List<Product> productList) {
-        this.state = state;
-        this.stateInfo = stateInfo;
+    public ProductExecution(ProductStateEnum stateEnum, List<Product> productList) {
+        this.state = stateEnum.getState();
+        this.stateInfo = stateEnum.getStateInfo();
         this.productList = productList;
     }
 

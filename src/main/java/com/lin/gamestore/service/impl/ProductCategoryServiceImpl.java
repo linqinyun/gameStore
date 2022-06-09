@@ -29,8 +29,8 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
         if (productCategory == null) {
             return new ProductCategoryExecution(ProductCategoryStateEnum.FAILED);
         }
-        productCategory.setCreateTime(new Date());
         try {
+            productCategory.setCreateTime(new Date());
             int effectedNum = productCategoryDao.insertProductCategory(productCategory);
             if (effectedNum <= 0) {
                 throw new ProductCategoryOperationException("新增失败");
